@@ -7,16 +7,16 @@ public class Event {
     private Long id;
     private String location;
     private int capacity;
-    private int reserved_count;
-    private double ticket_price;
+    private int reservedCount;
+    private double ticketPrice;
     private EventStatus eventStatus;
 
 
     public Event(String location, int capacity, int reserved_count, double ticket_price, EventStatus eventStatus) {
         this.location = location;
         this.capacity = capacity;
-        this.reserved_count = reserved_count;
-        this.ticket_price = ticket_price;
+        this.reservedCount = reserved_count;
+        this.ticketPrice = ticket_price;
         this.eventStatus = eventStatus;
     }
 
@@ -24,8 +24,8 @@ public class Event {
         this.id = id;
         this.location = location;
         this.capacity = capacity;
-        this.reserved_count = reserved_count;
-        this.ticket_price = ticket_price;
+        this.reservedCount = reserved_count;
+        this.ticketPrice = ticket_price;
         this.eventStatus = eventStatus;
     }
 
@@ -53,20 +53,20 @@ public class Event {
         this.capacity = capacity;
     }
 
-    public int getReserved_count() {
-        return reserved_count;
+    public int getReservedCount() {
+        return reservedCount;
     }
 
-    public void setReserved_count(int reserved_count) {
-        this.reserved_count = reserved_count;
+    public void setReservedCount(int reservedCount) {
+        this.reservedCount = reservedCount;
     }
 
-    public double getTicket_price() {
-        return ticket_price;
+    public double getTicketPrice() {
+        return ticketPrice;
     }
 
-    public void setTicket_price(double ticket_price) {
-        this.ticket_price = ticket_price;
+    public void setTicketPrice(double ticketPrice) {
+        this.ticketPrice = ticketPrice;
     }
 
     public EventStatus getEventStatus() {
