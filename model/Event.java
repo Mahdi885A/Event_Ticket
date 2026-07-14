@@ -5,6 +5,7 @@ import enums.EventStatus;
 
 public class Event {
     private Long id;
+    private String title;
     private String location;
     private int capacity;
     private int reservedCount;
@@ -12,7 +13,8 @@ public class Event {
     private EventStatus eventStatus;
 
 
-    public Event(String location, int capacity, int reserved_count, double ticket_price, EventStatus eventStatus) {
+    public Event(String title,String location, int capacity, int reserved_count, double ticket_price, EventStatus eventStatus) {
+        this.title =title;
         this.location = location;
         this.capacity = capacity;
         this.reservedCount = reserved_count;
@@ -20,8 +22,9 @@ public class Event {
         this.eventStatus = eventStatus;
     }
 
-    public Event(Long id, String location, int capacity, int reserved_count, double ticket_price, EventStatus eventStatus) {
+    public Event(Long id,String title, String location, int capacity, int reserved_count, double ticket_price, EventStatus eventStatus) {
         this.id = id;
+        this.title =title;
         this.location = location;
         this.capacity = capacity;
         this.reservedCount = reserved_count;
@@ -75,5 +78,13 @@ public class Event {
 
     public void setEventStatus(EventStatus eventStatus) {
         this.eventStatus = eventStatus;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
