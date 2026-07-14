@@ -1,16 +1,20 @@
 package repository;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface GenericRepository <T> {
-    T save(T t);
+    Long save(T t);
 
-    boolean update (Long id);
+    boolean update (Long id,T t);
 
     boolean delete (Long id);
 
-    T findById(Long id);
+    Optional<T> findById(Long id);
+
+    boolean cancel(Long id);
 
     List<T> findAll();
+
 
 }
