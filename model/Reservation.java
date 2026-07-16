@@ -2,31 +2,34 @@ package model;
 
 import enums.ReservationStatus;
 
-import java.time.LocalDate;
+import java.sql.Date;
 
 
 public class Reservation {
     private Long id;
     private String customerName;
-    private Long customerPhone;
+    private String customerPhone;
+    private Long eventId;
     private int ticketCount;
-    private LocalDate reservation;
+    private Date reservationDate;
     private ReservationStatus reservationStatus;
 
-    public Reservation(String customerName, Long customerPhone, int ticketCount, LocalDate reservation, ReservationStatus reservationStatus) {
+    public Reservation(String customerName, String customerPhone, Long eventId, int ticketCount, Date reservation, ReservationStatus reservationStatus) {
         this.customerName = customerName;
         this.customerPhone = customerPhone;
+        this.eventId = eventId;
         this.ticketCount = ticketCount;
-        this.reservation = reservation;
+        this.reservationDate = reservation;
         this.reservationStatus = reservationStatus;
     }
 
-    public Reservation(Long id, String customerName, Long customerPhone, int ticketCount, LocalDate reservation, ReservationStatus reservationStatus) {
+    public Reservation(Long id, String customerName, String customerPhone, Long eventId, int ticketCount, Date reservation, ReservationStatus reservationStatus) {
         this.id = id;
         this.customerName = customerName;
         this.customerPhone = customerPhone;
+        this.eventId = eventId;
         this.ticketCount = ticketCount;
-        this.reservation = reservation;
+        this.reservationDate = reservation;
         this.reservationStatus = reservationStatus;
     }
 
@@ -46,11 +49,11 @@ public class Reservation {
         this.customerName = customerName;
     }
 
-    public Long getCustomerPhone() {
+    public String getCustomerPhone() {
         return customerPhone;
     }
 
-    public void setCustomerPhone(Long customerPhone) {
+    public void setCustomerPhone(String customerPhone) {
         this.customerPhone = customerPhone;
     }
 
@@ -62,12 +65,12 @@ public class Reservation {
         this.ticketCount = ticketCount;
     }
 
-    public LocalDate getReservation() {
-        return reservation;
+    public Date getReservationDate() {
+        return reservationDate;
     }
 
-    public void setReservation(LocalDate reservation) {
-        this.reservation = reservation;
+    public void setReservationDate(Date reservationDate) {
+        this.reservationDate = reservationDate;
     }
 
     public ReservationStatus getReservationStatus() {
@@ -76,5 +79,13 @@ public class Reservation {
 
     public void setReservationStatus(ReservationStatus reservationStatus) {
         this.reservationStatus = reservationStatus;
+    }
+
+    public Long getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(Long eventId) {
+        this.eventId = eventId;
     }
 }
